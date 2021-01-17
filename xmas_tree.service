@@ -1,0 +1,14 @@
+[Unit]
+Description=XmasTree Lights
+
+[Service]
+User=root
+ExecStart=python3 /home/pi/xmas_pi/xmastree.py config=/home/pi/xmas_pi/christmas.conf
+StandardOutput=null
+Restart=always
+RestartSec=0
+
+# runtime=5 pattern=christmas dir=/home/pi/xmas_pi
+
+[Install]
+WantedBy=multi-user.target

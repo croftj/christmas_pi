@@ -1,0 +1,14 @@
+[Unit]
+Description=Desktop Lamps
+
+[Service]
+User=pi
+ExecStart=python3 /home/pi/porchlamps/porchlamps.py config=/home/pi/porchlamps/desktop.conf
+StandardOutput=null
+Restart=on-failure
+RestartSec=0
+
+# dir=/home/pi/porchlamps
+
+[Install]
+WantedBy=multi-user.target
